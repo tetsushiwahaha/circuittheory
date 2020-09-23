@@ -12,27 +12,49 @@
 想像するのだが，万が一まだ準備していない，という人のために，最初の節では
 各OSに応じた環境セットアップの情報を提供する．
 
-（未稿）
 ### Windows 
-
+Windows は言わずと知れたMicorosoft の商用OSである．
+Python Windows版のインストールは
+https://www.python.jp/install/windows/index.html 
+を参照のこと．
+Windows10ならばMicrosoftネイティブなPython環境もあるのだが，いろいろ
+小回りがきかないらしい．
 
 ### Linux
+Linux はUNIX系OSのひとつで，様々なアーキテクチャのコンピュータで動作する．
+OSやユーティリティを配布する方式（ディストリビューション）によって
+有料であったり無償であったりする．
 
+Python Linux版 Anaconda インストールは，
+https://www.python.jp/install/anaconda/unix/install.html
+を参照のこと．
+Anaconda自体はPythonのデータサイエンス環境であるが，
+理工学部の研究実践のために必要なツールが同梱されているので
+便利であろう．
+
+なお，Linux用の各種インストーラ，apt-get, yumyum などでもインストール
+可能である．下記macOS用のHomebrew もLinuxでは利用可能である．
 
 ### FreeBSD
-いや，このOSをノートパソコンに入れて使ってる猛者はいるかな？
-さらに ports コレクションで管理している人はいるのかな？
+FreeBSD は様々なアーキテクチャのコンピュータで動作するフリーのOSである．
+このOSをノートパソコンに入れて使ってる猛者はいるかな？
+Portsコレクションによってソースコードから鍛える方法，および，
+pkg コマンドを駆使してバイナリを直接インストールする方法が用意されている．
 
-### Apple macOS
-PythonとLaTeXを同時に整備する，かつ，情報工学を修めるにふさわしく，ソー
-スコードレベルで資源を入手し，自分のマシンでコンパイル・インストールする
-ように仕組むのが硬派である．
+### macOS
+macOS は基本的にはUNIXであり，シェルから対話的に使う用途には
+向いている．
 
 #### macports
 
+オープンソースなツールやOSユーティリティは
+ソースコードからコンパイルして整備できる．
+[MacPorts](https://www.macports.org)はこの目的のツールである．Pythonは
+バージョン別にインストールできるようになっている．
 
-#### brew
-よく知らん
+#### Homebrew
+Homebrew は https://brew.sh/index_ja を参照のこと．
+こちらはバイナリでインストールできる．
 
 ## 2章交流回路
 
