@@ -51,7 +51,6 @@ t_start = -np.pi
 t_end = 5 * np.pi
 init_phase = np.pi/6
 
-
 interval = np.arange(t_start, t_end, dt)
 
 def wave(t, alpha):
