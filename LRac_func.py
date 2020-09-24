@@ -31,12 +31,12 @@ psi = 1.0
 Em = 1
 z = np.sqrt(R * R + omega*omega);
 
-total = -Em/z * np.sin(psi - np.arctan(omega * L/R)) * np.exp(-R/L * x_list)\
-	+ Em/z * np.sin(omega * x_list + psi - np.arctan(omega * L /R))
-
 first = -Em / z * np.sin(psi - np.arctan(omega * L / R))\
 	* np.exp(-R/L * x_list) 
+
 second = Em / z * np.sin(omega * x_list + psi - np.arctan(omega * L /R)) 
+
+total = first + second
 
 e = Em * np.sin(omega * x_list + psi)/1000
 
