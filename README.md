@@ -108,14 +108,14 @@ Homebrew は https://brew.sh/index_ja を参照のこと．
 決めている．いろいろ変えてみるとよい．
 * LaTeX が原因でうまく動かない場合は，`Fig.2.1.2-nolatex.py`を試してみよう．
 
-### 過渡応答の減衰 `LR.py` `LRsolv.py` `LCR.py`
+### 過渡応答の減衰 `LRac_func.py` `LRac_num.py` `LCRac_num.py`
 
 `SolveDiff.pdf`を読んでください．
 まずは微分方程式を手で解いて，時刻の関数を得た場合．（この解のことを
 解析解という）その関数に従ってグラフを描かせたもの：
 
 ```
-% python LR.py
+% python LRac_func.py
 ```
 
 ![Figure_1](https://user-images.githubusercontent.com/52724526/93469512-919b3780-f92b-11ea-9cec-aaae4404db8b.png)
@@ -125,7 +125,7 @@ Homebrew は https://brew.sh/index_ja を参照のこと．
 同じ回路に対する数値解も示そう．
 
 ```
-% python LRsolve.py
+% python LRac_num.py
 ```
 
 得られる図は前述の total の軌跡と変わりがない．ほとんど正確に数値解が
@@ -135,9 +135,8 @@ Homebrew は https://brew.sh/index_ja を参照のこと．
 
 
 ```
-% python LCR.py
+% python LCRac_num.py
 ```
 
-ファイル名に統一感がなくて恐縮だが，`LCR.py`ではLCR直列回路について，
-数値計算するプログラムである．いろいろとパラメータを変えて
-応答を観察せよ．
+LCR直列交流回路について数値計算するプログラムである．
+いろいろとパラメータを変えて応答を観察せよ．
