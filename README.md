@@ -65,8 +65,13 @@ Homebrew は https://brew.sh/index_ja を参照のこと．
 ### 直流回路の過渡応答
 
 RRC回路の直流応答を調べる．
-`RRCdc_func.py` を実行してみてほしい．TEXの
-環境が無ければ `RRCdc_func_tex.py` を試してみよ．
+`RRCdc_func.py` を実行してみてほしい．
+
+```
+% python RRCdc_func.py
+```
+
+TEXの環境が無ければ `RRCdc_func_tex.py` を試してみよ．
 同じ回路の数値計算バージョン`RRCdc_num.py`も試してみよ．
 同じ結果が出るので面白くないとは思うが，是非コードを
 読んででみてほしい．
