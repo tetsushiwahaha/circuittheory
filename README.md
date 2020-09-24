@@ -70,6 +70,8 @@ RRC回路の直流応答を調べる．
 ```
 % python RRCdc_func.py
 ```
+![Figure_1](https://user-images.githubusercontent.com/52724526/94141539-daad3780-fea7-11ea-804a-f97185be814e.png)
+
 
 TEXの環境が無ければ `RRCdc_func_tex.py` を試してみよ．
 同じ回路の数値計算バージョン`RRCdc_num.py`も試してみよ．
