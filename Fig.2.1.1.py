@@ -4,6 +4,7 @@ from matplotlib import animation
 from matplotlib import gridspec
 import matplotlib.patches as patches
 
+####### some codes from stackoverflow
 def multiple_formatter(denominator=2, number=np.pi, latex='\pi'):
 	def gcd(a, b):
 		while b:
@@ -44,21 +45,25 @@ class Multiple:
 		return plt.MultipleLocator(self.number / self.denominator)
 	def formatter(self):
 		return plt.FuncFormatter(multiple_formatter(self.denominator, self.number, self.latex))
+####################
 
+# Essential codes start here
 
+# Conditions. Please try to change below.
 dt = np.pi / 32
 t_start = -np.pi
 t_end = 5 * np.pi
 init_phase = np.pi/6
+omega = 1
 
 interval = np.arange(t_start, t_end, dt)
 
 def wave(t, alpha):
-    return np.sin(t + alpha)
+    return np.sin(omega * t + alpha)
 
 def on_circle(t, alpha):
-    x = np.cos(t + alpha)
-    y = np.sin(t + alpha)
+    x = np.cos(omega * t + alpha)
+    y = np.sin(omega * t + alpha)
     return x, y
 
 fig = plt.figure(figsize = (10, 2.5))
@@ -66,9 +71,9 @@ gs = gridspec.GridSpec(1, 2, width_ratios = [1, 3])
 ax0 = plt.subplot(gs[0])
 ax1 = plt.subplot(gs[1], sharey = ax0)
 
-plt.title(r"$\omega = 1$")
+plt.title(r"$\omega = {0}$".format(omega))
 
-# circle movement
+# Circle movement (LEFT PANE)
 circ = patches.Circle(xy=(0, 0), radius = 1.0, fc='w', ec='black')
 ax0.add_patch(circ)
 ax0.set_xlim(-1.0, 1.0)
@@ -80,7 +85,7 @@ ax0.hlines(0, -1, 1, color="black", alpha = 0.5)
 ax0.set_aspect(1.0/ax0.get_data_ratio())
 ax1.set_aspect(3.0/ax0.get_data_ratio())
 
-# time response
+# Time response (RIGHT PANE)
 ax1.plot(interval, wave(interval, init_phase), 
 	ls = '--', c = "blue", alpha = 0.3)
 ax1.set_xlim(t_start, t_end)
@@ -113,6 +118,3 @@ ani = animation.ArtistAnimation(fig, ims, interval = 100, repeat=True)
 #ani.save('pendulum.gif', writer='imagemagick')
 
 plt.show()
-
-
-
