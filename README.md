@@ -82,6 +82,8 @@ Type "help", "copyright", "credits" or "license" for more information.
 そのあと，`numpy` という数値計算パッケージを読み込んで `np` という短縮形で
 使うことを指示したあと，j π/3 の指数関数値を計算した．結果は
 1/2 + j √3/2  となっている．
+なお，平方根は`np.sqrt()` で求められるし，三角関数は
+`np.sin()`, `np.cos()` である．
 
 ## 1章 直流回路
 
