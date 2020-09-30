@@ -48,18 +48,21 @@ t_end = 5 * np.pi
 
 lead = np.pi/3
 lag =  -np.pi/3
+omega = 1
 
 interval = np.arange(t_start, t_end, dt)
 
 def wave(t, alpha):
-    return np.sin(t + alpha)
+    return np.sin(omega * t + alpha)
 
 def on_circle(t, phase):
-    x = np.cos(t + phase)
-    y = np.sin(t + phase)
+    x = np.cos(omega * t + phase)
+    y = np.sin(omega * t + phase)
     return x, y
 
 fig = plt.figure(figsize = (10, 2.5))
+
+
 gs = gridspec.GridSpec(1, 2, width_ratios = [1, 3])
 ax0 = plt.subplot(gs[0])
 ax1 = plt.subplot(gs[1])
@@ -92,6 +95,7 @@ ax1.set_xlabel(r'$t$')
 ax1.set_ylabel(r'$A_m$')
 
 plt.subplots_adjust(top=0.9, bottom=0.2, right=0.9, left=0.1, wspace = 0.3)
+plt.title(r"$\omega = {0}$".format(omega))
 
 ims = []
 for t in interval:
@@ -105,8 +109,8 @@ for t in interval:
 		+ ax0.plot(x1, y1, marker = 'o', c = 'blue', ms = 5)\
 		+ ax0.plot(x2, y2, marker = 'o', c = 'green', ms = 5)\
 		+ ax1.plot(t, wave(t, 0), marker = 'o', c ='red', ms= 8)\
-		+ ax1.plot(t, wave(t + lead, 0), marker ='o', c ='blue', ms = 8)\
-		+ ax1.plot(t, wave(t + lag, 0), marker ='o', c ='green', ms = 8)
+		+ ax1.plot(t, wave(t, lead), marker ='o', c ='blue', ms = 8)\
+		+ ax1.plot(t, wave(t, lag), marker ='o', c ='green', ms = 8)
 	ims.append(p)
 
 ani = animation.ArtistAnimation(fig, ims, interval = 150, repeat=True)
