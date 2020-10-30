@@ -47,6 +47,7 @@ class Multiple:
 		return plt.FuncFormatter(multiple_formatter(self.denominator, self.number, self.latex))
 ####################
 
+# MAIN program
 
 params = {'text.usetex': True,
           #'text.latex.preamble': r'\usepackage{newtxtext,newtxmath}',
@@ -70,15 +71,19 @@ fig.subplots_adjust(bottom=0.3)
 plt.xticks(fontsize=10) 
 plt.yticks(fontsize=10) 
 
-plt.title(r'$\omega = 60$')
+##############################################################
 
 omega = 60
+
+plt.title(r'$\omega = {0}$'.format(omega))
+
 
 # AXES helpers
 ax.set_xlabel(r'$t \longrightarrow$', fontsize=12)
 ax.set_ylabel(r'$x(t) \longrightarrow $', fontsize=12)
 #ax.set_xlim([-0.1, 0.5])
 #ax.set_ylim([])
+
 tau = 2*np.pi
 major = Multiple(omega*2, tau, r'2\pi')
 minor = Multiple(omega*4, tau, r'2\pi')
@@ -88,7 +93,7 @@ ax.xaxis.set_major_formatter(major.formatter())
 ax.grid(True)
 ax.grid(c='gainsboro', zorder=3)
 
-x_list = np.arange(-np.pi/60, 3*np.pi/60, 0.001)
+x_list = np.arange(-np.pi/omega, 3*np.pi/omega, 0.001)
 
 
 ### DATA PLOTTING 
@@ -109,6 +114,3 @@ pdf.savefig()
 pdf.close()
 
 plt.show()
-
-
-
