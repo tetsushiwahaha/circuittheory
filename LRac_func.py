@@ -7,6 +7,8 @@ import matplotlib.pyplot as plt
 from scipy.integrate import solve_ivp
 from matplotlib.backends.backend_pdf import PdfPages
 
+import csv
+
 base = 10
 fig = plt.figure(figsize = (base, base/16*5))		# create a figure
 ax = fig.add_subplot(111)					# create axes 
@@ -40,6 +42,9 @@ total = first + second
 
 e = Em * np.sin(omega * x_list + psi)/1000
 
+for i in range(len(x_list)):
+	print("{0}, {1}, {2}, {3}".format(
+		x_list[i], first[i], second[i], total[i]))
 
 
 ### DATA PLOTTING 
