@@ -21,7 +21,7 @@ t_start = 0.0
 t_end = 0.5
 t_interval = (t_start, t_end)
 
-x0 = [0.1, 0]
+x0 = [0.2, 0]
 y = []
 
 solved = solve_ivp(func, t_interval, x0, dense_output=True)
