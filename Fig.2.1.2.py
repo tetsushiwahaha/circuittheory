@@ -113,7 +113,7 @@ for t in interval:
 		+ ax1.plot(t, wave(t, lag), marker ='o', c ='green', ms = 8)
 	ims.append(p)
 
-ani = animation.ArtistAnimation(fig, ims, interval = 150, repeat=True)
+ani = animation.ArtistAnimation(fig, ims, interval = 50, repeat=True)
 
 #ani.save('pendulum.gif', writer='imagemagick')
 
