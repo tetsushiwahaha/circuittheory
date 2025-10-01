@@ -77,8 +77,7 @@ Pythonは複素数をサポートしており，ちょっとした複素数計�
 利用すると理解が進むであろう．
 ```
 % python
-Python 3.8.5 (default, Sep  6 2020, 03:54:05)
-[Clang 11.0.3 (clang-1103.0.32.62)] on darwin
+Python 3.12.11 (main, Jun  3 2025, 15:41:47) [Clang 17.0.0 (clang-1700.0.13.3)] on darwin
 Type "help", "copyright", "credits" or "license" for more information.
 >>> (3+1j) * (1-3j) 
 (6-8j)
