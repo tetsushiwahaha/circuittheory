@@ -10,7 +10,7 @@ def multiple_formatter(denominator=2, number=np.pi, latex='\pi'):
 		return a
 	def _multiple_formatter(x, pos):
 		den = denominator
-		num = np.int(np.rint(den*x/number))
+		num = int(np.rint(den*x/number))
 		com = gcd(num,den)
 		(num,den) = (int(num/com),int(den/com))
 		if den==1:
