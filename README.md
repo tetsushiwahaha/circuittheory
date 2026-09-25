@@ -36,9 +36,18 @@ Python環境はLinuxにおいてはパッケージで提供されるだろう．
 
 ### macOS
 macOS は基本的にはUNIXであり，シェルから対話的に使う用途には
+<<<<<<< HEAD
 端末(Terminal.app)を用いるとよい．
 Homebrew はコンパイル済バイナリとして Python 環境をインストールできる．
 https://brew.sh/index_ja を参照のこと．
+=======
+端末(Terminal.app)を用いるとよい．デフォルトで pythonは入っているが，
+あらためてHomebrew で導入することをおすすめする．
+
+#### Homebrew
+Homebrew は https://brew.sh/index_ja を参照のこと．
+こちらはバイナリで Python 環境をインストールできる．
+>>>>>>> c0521b49a5ed401449f6eb9042cbfb22a872845f
 
 ## 実行の仕方
 OSのシェルを起動し，そこからPython を起動し，インタプリタと対話的に使う．
@@ -58,8 +67,12 @@ Pythonは複素数をサポートしており，ちょっとした複素数計�
 利用すると理解が進むであろう．
 ```
 % python
+<<<<<<< HEAD
 Python 3.14.7 (main, Aug  5 2026, 10:29:49) 
 [Clang 21.0.0 (clang-2100.1.1.101)] on darwin
+=======
+Python 3.12.11 (main, Jun  3 2025, 15:41:47) [Clang 17.0.0 (clang-1700.0.13.3)] on darwin
+>>>>>>> c0521b49a5ed401449f6eb9042cbfb22a872845f
 Type "help", "copyright", "credits" or "license" for more information.
 >>> (3+1j) * (1-3j) 
 (6-8j)
@@ -124,7 +137,7 @@ TEXの環境があれば `RRCdc_func_tex.py` を試してみよ．
 波を描かせている．`omega`をいじれば各周波数が変えられるが，基本的に
 どんな`omega`にしようが同じ図がでる．グラフのラベル（数値）に注意．
 
-### 正弦波を理解する `Fig2.2.1.py`
+### 正弦波を理解する `Fig2.1.1.py`
 
 教科書図2.1.1 をダイナミックに理解する．改めて正弦波(sin 波)とは円周を一定速度
 で周回する点の，y 軸への射影であることを理解しよう． x軸への射影は
