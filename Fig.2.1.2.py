@@ -10,7 +10,7 @@ def multiple_formatter(denominator=2, number=np.pi, latex='\pi'):
 		return a
 	def _multiple_formatter(x, pos):
 		den = denominator
-		num = np.int(np.rint(den*x/number))
+		num = int(np.rint(den*x/number))
 		com = gcd(num,den)
 		(num,den) = (int(num/com),int(den/com))
 		if den==1:
@@ -118,6 +118,4 @@ ani = animation.ArtistAnimation(fig, ims, interval = 50, repeat=True)
 #ani.save('pendulum.gif', writer='imagemagick')
 
 plt.show()
-
-
 
